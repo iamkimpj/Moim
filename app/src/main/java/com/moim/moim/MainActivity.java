@@ -13,7 +13,6 @@ import android.widget.TextView;
 import com.moim.moim.meet.FragmentOne;
 import com.moim.moim.meet.MeetFragment;
 
-import static com.moim.moim.R.id.fragment_meet;
 
 
 public class MainActivity extends AppCompatActivity {
