@@ -67,7 +67,7 @@ public class MeetFragment extends Fragment {
 //        return fragment;
 //    }
 
-    @Override
+//    @Override
 //    public void onCreate(Bundle savedInstanceState) {
 //        super.onCreate(savedInstanceState);
 //        if (getArguments() != null) {
@@ -76,7 +76,7 @@ public class MeetFragment extends Fragment {
 //        }
 //    }
 
-    @Override
+//    @Override
 //    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 //        // Inflate the layout for this fragment
 //        return inflater.inflate(R.layout.fragment_meet, container, false);
@@ -92,7 +92,7 @@ public class MeetFragment extends Fragment {
 //        }
 //    }
 
-    @Override
+//    @Override
 //    public void onAttach(Context context) {
 //        super.onAttach(context);
 //        if (context instanceof OnFragmentInteractionListener) {
@@ -103,7 +103,7 @@ public class MeetFragment extends Fragment {
 //        }
 //    }
 
-    @Override
+//    @Override
 //    public void onDetach() {
 //        super.onDetach();
 //        mListener = null;
