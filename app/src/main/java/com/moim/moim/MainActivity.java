@@ -49,11 +49,11 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-        Fragment fragment = new MeetFragment();
+//        Fragment fragment = ;
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.fragment_meet, fragment);
-        fragmentTransaction.commit();
+        fragmentTransaction.add(R.id.fragment_meet, new MeetFragment());
+//        fragmentTransaction.commit();
 
 
 
