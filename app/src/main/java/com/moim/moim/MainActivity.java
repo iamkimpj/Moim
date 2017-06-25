@@ -8,9 +8,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.widget.TextView;
 
-import com.moim.moim.meet.FragmentOne;
+import com.moim.moim.group.GroupFragment;
 import com.moim.moim.meet.MeetFragment;
 
 
@@ -25,14 +24,25 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
-                case R.id.navigation_home:
-//                    mTextMessage.setText(R.string.title_meet);
+                case R.id.navigation_meet:
+
+
+                    getSupportFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.content, new MeetFragment())
+                            .commit();
+
                     return true;
-                case R.id.navigation_dashboard:
-//                    mTextMessage.setText(R.string.title_group);
+                case R.id.navigation_group:
+                    getSupportFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.content, new GroupFragment())
+                            .commit();
+
+
                     return true;
-                case R.id.navigation_notifications:
-//                    mTextMessage.setText(R.string.title_setting);
+                case R.id.navigation_setting:
+//                    mTextMessage.setText(R.strig.title_setting);
                     return true;
             }
             return false;
