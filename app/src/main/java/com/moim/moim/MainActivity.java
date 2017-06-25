@@ -24,14 +24,14 @@ public class MainActivity extends AppCompatActivity {
                     mTextMessage.setText("모임");
                     return true;
                 case R.id.navigation_notifications:
-                    mTextMessage.setText("설정");
+                    mTextMessage.setText("설");
                     return true;
             }
             return false;
         }
 
     };
-
+//
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
