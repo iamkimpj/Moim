@@ -17,7 +17,7 @@ import static com.moim.moim.R.id.fragment_meet;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView mTextMessage;
+//    private TextView mTextMessage;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -26,13 +26,13 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_meet);
+//                    mTextMessage.setText(R.string.title_meet);
                     return true;
                 case R.id.navigation_dashboard:
-                    mTextMessage.setText(R.string.title_group);
+//                    mTextMessage.setText(R.string.title_group);
                     return true;
                 case R.id.navigation_notifications:
-                    mTextMessage.setText(R.string.title_setting);
+//                    mTextMessage.setText(R.string.title_setting);
                     return true;
             }
             return false;
@@ -45,14 +45,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mTextMessage = (TextView) findViewById(R.id.message);
+//        mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-//        Fragment fragment = ;
+        Fragment fragment = new MeetFragment();
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.fragment_meet, new MeetFragment());
+        fragmentTransaction.add(R.id.fragment_meet, fragment);
 //        fragmentTransaction.commit();
 
 
