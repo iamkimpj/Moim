@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 case R.id.navigation_setting:
 //                    mTextMessage.setText(R.strig.title_setting);
-                    //
+
                     //
                     return true;
             }
