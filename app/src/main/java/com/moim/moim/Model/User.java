@@ -5,4 +5,14 @@ package com.moim.moim.Model;
  */
 
 public class User {
+    private User () {}
+    private static class Singleton {
+        private static final User instance = new User();
+    }
+
+    public static User getInstance() {
+        System.out.println("User Singleton use");
+
+        return Singleton.instance;
+    }
 }
