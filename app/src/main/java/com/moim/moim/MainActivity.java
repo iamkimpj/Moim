@@ -7,10 +7,14 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
 
+import com.moim.moim.Model.User;
 import com.moim.moim.group.GroupFragment;
 import com.moim.moim.meet.MeetFragment;
+
+
 
 
 
@@ -54,6 +58,10 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+//        User test = User.getInstance().name("anord");
+//
+//        Log.d("test", test.getName());
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
