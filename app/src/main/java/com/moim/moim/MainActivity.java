@@ -10,12 +10,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
 
+import com.moim.moim.Model.Conn;
+import com.moim.moim.Model.Meet;
 import com.moim.moim.Model.User;
 import com.moim.moim.group.GroupFragment;
 import com.moim.moim.meet.MeetFragment;
 
+import org.json.JSONException;
+import org.json.JSONObject;
 
-
+import java.io.IOException;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -62,6 +66,21 @@ public class MainActivity extends AppCompatActivity {
 //        User test = User.getInstance().name("anord");
 //
 //        Log.d("test", test.getName());
+
+        Conn conn = new Conn();
+//
+        try {
+            conn.test();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        Meet meet = new Meet(0);
+
+
+        Log.d("test", meet.timeType() );
+        Log.d("test", meet.timeValue() );
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
