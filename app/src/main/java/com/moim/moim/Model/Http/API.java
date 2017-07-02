@@ -10,9 +10,9 @@ import retrofit2.http.GET;
  */
 
 public interface API {
-//    @GET("/api/test/path")
-//    Call<TestSchema> connTest();
-
-    @GET("/test")
+    @GET("/api/test/path")
     Call<TestSchema> connTest();
+
+//    @GET("/test")
+//    Call<TestSchema> connTest();
 }

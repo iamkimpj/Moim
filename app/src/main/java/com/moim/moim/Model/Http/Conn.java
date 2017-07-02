@@ -9,8 +9,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Conn {
 
-    private static final String host = "http://52.79.231.212";
-//    private final String host = "https://jumoim-171709.appspot.com";
+//    private static final String host = "http://52.79.231.212";
+    private static final String host = "https://jumoim-171709.appspot.com";
 
     private Conn() {}
 
