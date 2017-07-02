@@ -10,7 +10,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
 
-import com.moim.moim.Model.Conn;
+import com.moim.moim.Model.Http.API;
+import com.moim.moim.Model.Http.Conn;
+import com.moim.moim.Model.Http.Schema.TestSchema;
 import com.moim.moim.Model.Meet;
 import com.moim.moim.Model.User;
 import com.moim.moim.group.GroupFragment;
@@ -20,6 +22,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -63,23 +69,32 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-//        User test = User.getInstance().name("anord");
+        Call<TestSchema> call = Conn.ready().api().connTest();
+        call.enqueue(new Callback<TestSchema>() {
+            @Override
+            public void onResponse(Call<TestSchema> call, Response<TestSchema> response) {
+                if (response.isSuccessful()) {
+
+                    TestSchema test = response.body();
+
+                    test.test();
+                } else {
+                    Log.d("test","failed to get respose");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<TestSchema> call, Throwable t) {
+                Log.d("test","failed to connect");
+            }
+
+        });
+
+//        Meet meet = new Meet(0);
 //
-//        Log.d("test", test.getName());
-
-        Conn conn = new Conn();
 //
-        try {
-            conn.test();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        Meet meet = new Meet(0);
-
-
-        Log.d("test", meet.timeType() );
-        Log.d("test", meet.timeValue() );
+//        Log.d("test", meet.timeType() );
+//        Log.d("test", meet.timeValue() );
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
