@@ -5,7 +5,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import java.util.ArrayList;
+import android.content.Context;
+
 import java.util.Objects;
+
 
 /**
  * Created by ltcare on 2017-07-01.
@@ -43,8 +46,9 @@ public class ListViewAdapter extends BaseAdapter {
     // position에 위치한 데이터를 화면에 출력하는데 사용될 View를 리턴. : 필수 구현
     @Override
     public View getView(int position, View convertView, ViewGroup viewGroup) {
-        MeetListviewItemView view = new MeetListviewItemView(  );
-        //MeetListviewItemView view = new MeetListviewItemView( getApplicationContext() );
+
+        //MeetListviewItemView view = new MeetListviewItemView(  );
+        MeetListviewItemView view = new MeetListviewItemView( viewGroup.getContext() );
         MeetListviewItem item = items.get(position);
         return view;
 
