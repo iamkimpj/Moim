@@ -1,18 +1,9 @@
 package com.moim.moim.meet;
 
-import android.content.Context;
-//import android.graphics.drawable.Drawable;
 
-
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
-import android.widget.TextView;
-
-import com.moim.moim.R;
-
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -22,7 +13,7 @@ import java.util.Objects;
 
 public class ListViewAdapter extends BaseAdapter {
     // Adapter에 추가된 데이터를 저장하기 위한 ArrayList
-    private ArrayList<MeetListviewItem> MeetListview = new ArrayList<MeetListviewItem>() ;
+    private ArrayList<MeetListviewItem> items = new ArrayList<MeetListviewItem>() ;
 
     // ListViewAdapter의 생성자
     //public ListViewAdapter() {
@@ -31,16 +22,17 @@ public class ListViewAdapter extends BaseAdapter {
     // Adapter에 사용되는 데이터의 개수를 리턴. : 필수 구현
     @Override
     public int getCount() {
-        return MeetListview.size() ;
+        return items.size() ;
     }
 
     public void addItem(MeetListviewItem item){
-        MeetListview.add(item);
+        items.add(item);
     }
 
     @Override
-    public Objects getItem(int position){
-        return MeetListview.get(position);
+    public Object getItem(int position){
+
+        return items.get(position);
     }
 
     @Override
@@ -51,11 +43,12 @@ public class ListViewAdapter extends BaseAdapter {
     // position에 위치한 데이터를 화면에 출력하는데 사용될 View를 리턴. : 필수 구현
     @Override
     public View getView(int position, View convertView, ViewGroup viewGroup) {
-
-        MeetListviewItemView view = new MeetListviewItemView(this.getApplicationContext());
-        MeetListviewItem item = MeetListview.get(position);
+        MeetListviewItemView view = new MeetListviewItemView(  );
+        //MeetListviewItemView view = new MeetListviewItemView( getApplicationContext() );
+        MeetListviewItem item = items.get(position);
         return view;
 
 
     }
 }
+
