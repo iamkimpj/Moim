@@ -49,6 +49,8 @@ public class MeetListviewItemView extends LinearLayout{
         imageView = (ImageView) findViewById(R.id.imageView);
         imageView1 = (ImageView) findViewById(R.id.imageView1);
 
+
+
     }
     public void setDayofweek(String dayofweek){
         textView.setText(dayofweek);

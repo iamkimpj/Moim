@@ -85,8 +85,13 @@ public class MeetFragment extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
        // return inflater.inflate(R.layout.fragment_meet,container,false);
-        View view = inflater.inflate(R.layout.meet_listview, container,false);
-        listView = (ListView)getActivity().findViewById(R.id.listview);
+
+
+        View view = inflater.inflate(R.layout.fragment_meet, container,false);
+//        listView = (ListView) getActivity().findViewById(R.id.meetlistview);
+
+        listView = (ListView) view.findViewById(R.id.meetlistview);
+
 
 
        // setContentView(R.layout.fragment_meet);
@@ -95,8 +100,13 @@ public class MeetFragment extends Fragment {
 
         adapter = new ListViewAdapter();
 
+//        adapter = new ListViewAdapter(getActivity(), movieList);
+//
         adapter.addItem(new MeetListviewItem("수요일","9","오후 05:00","2017 / 7 / 9 오후 5시 0분","부천역 더치앤빈","각자커피값","￦","부천IT 스터디 안드로이드 개발",android.R.drawable.ic_lock_idle_alarm,android.R.drawable.ic_menu_mapmode));
-
+        adapter.addItem(new MeetListviewItem("2ww","9","오후 05:00","2017 / 7 / 9 오후 5시 0분","부천역 더치앤빈","각자커피값","￦","부천IT 스터디 안드로이드 개발",android.R.drawable.ic_lock_idle_alarm,android.R.drawable.ic_menu_mapmode));
+        adapter.addItem(new MeetListviewItem("we일","9","오후 05:00","2017 / 7 / 9 오후 5시 0분","부천역 더치앤빈","각자커피값","￦","부천IT 스터디 안드로이드 개발",android.R.drawable.ic_lock_idle_alarm,android.R.drawable.ic_menu_mapmode));
+        adapter.addItem(new MeetListviewItem("wer요일","9","오후 05:00","2017 / 7 / 9 오후 5시 0분","부천역 더치앤빈","각자커피값","￦","부천IT 스터디 안드로이드 개발",android.R.drawable.ic_lock_idle_alarm,android.R.drawable.ic_menu_mapmode));
+//
         listView.setAdapter(adapter);
 
         return view;

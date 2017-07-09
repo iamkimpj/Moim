@@ -1,6 +1,7 @@
 package com.moim.moim.meet;
 
 
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -29,12 +30,15 @@ public class ListViewAdapter extends BaseAdapter {
     }
 
     public void addItem(MeetListviewItem item){
+
         items.add(item);
     }
 
+
+
     @Override
     public Object getItem(int position){
-
+//        Log.d("test", position + "" );
         return items.get(position);
     }
 
@@ -50,9 +54,14 @@ public class ListViewAdapter extends BaseAdapter {
         //MeetListviewItemView view = new MeetListviewItemView(  );
         MeetListviewItemView view = new MeetListviewItemView( viewGroup.getContext() );
         MeetListviewItem item = items.get(position);
+        view.setDayofweek(item.dayofweek);
         return view;
 
 
     }
+
+
+
+
 }
 
