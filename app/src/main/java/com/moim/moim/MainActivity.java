@@ -53,11 +53,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        if( true ){
-            final Intent intent = new Intent(this, LoginActivity.class);
-            startActivity(intent);
-            finish();
-        }
+//        if( true ){
+//            final Intent intent = new Intent(this, LoginActivity.class);
+//            startActivity(intent);
+//            finish();
+//        }
 
 //        Call<TestSchema> call = Conn.ready().api().connTest();
 //        call.enqueue(new Callback<TestSchema>() {
