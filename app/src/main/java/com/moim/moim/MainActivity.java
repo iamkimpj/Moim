@@ -1,17 +1,15 @@
 package com.moim.moim;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
+import com.moim.moim.Login.LoginActivity;
 import com.moim.moim.group.GroupFragment;
 import com.moim.moim.meet.MeetFragment;
-
 
 
 public class MainActivity extends AppCompatActivity {
@@ -43,27 +41,59 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 case R.id.navigation_setting:
 //                    mTextMessage.setText(R.strig.title_setting);
+
+                    //
                     return true;
             }
             return false;
         }
 
     };
-//sd
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        if( true ){
+            final Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+            finish();
+        }
+
+//        Call<TestSchema> call = Conn.ready().api().connTest();
+//        call.enqueue(new Callback<TestSchema>() {
+//            @Override
+//            public void onResponse(Call<TestSchema> call, Response<TestSchema> response) {
+//                if (response.isSuccessful()) {
+//
+//                    TestSchema test = response.body();
+//
+//                    test.test();
+//                } else {
+//                    Log.d("test","failed to get respose");
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<TestSchema> call, Throwable t) {
+//                Log.d("test","failed to connect");
+//            }
+//
+//        });
+
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        mTextMessage = (TextView) findViewById(R.id.message);
+
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-        Fragment fragment = new MeetFragment();
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.content, fragment);
-        fragmentTransaction.commit();
+
+        getSupportFragmentManager()
+                .beginTransaction()
+                .add(R.id.content, new MeetFragment())
+                .commit();
 
 
 
