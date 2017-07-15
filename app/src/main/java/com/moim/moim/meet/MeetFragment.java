@@ -1,31 +1,31 @@
 package com.moim.moim.meet;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 //import android.app.Fragment;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 
-//import android.os.Bundle;
-//import android.support.annotation.Nullable;
-//import android.support.v4.app.Fragment;
-//import android.view.LayoutInflater;
-//import android.view.View;
-//import android.view.ViewGroup;
-
+import com.moim.moim.MainActivity;
 import com.moim.moim.R;
 
 
 
 
 import com.moim.moim.R;
+import com.moim.moim.meet.IN.MeetView;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -74,14 +74,10 @@ public class MeetFragment extends Fragment {
 //        }
 //    }
 
-//    @Override
-//    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-//        // Inflate the layout for this fragment
-//        return inflater.inflate(R.layout.fragment_meet, container, false);
-//    }
+
 
     ListView listView;
-    ListViewAdapter adapter;
+    MeetListViewAdapter adapter;
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
        // return inflater.inflate(R.layout.fragment_meet,container,false);
@@ -98,7 +94,7 @@ public class MeetFragment extends Fragment {
 
         //listView = (ListView) findViewById(R.id.listview);
 
-        adapter = new ListViewAdapter();
+        adapter = new MeetListViewAdapter();
 
 //        adapter = new ListViewAdapter(getActivity(), movieList);
 //
@@ -106,8 +102,48 @@ public class MeetFragment extends Fragment {
         adapter.addItem(new MeetListviewItem("2ww","9","오후 05:00","2017 / 7 / 9 오후 5시 0분","부천역 더치앤빈","각자커피값","￦","부천IT 스터디 안드로이드 개발",android.R.drawable.ic_lock_idle_alarm,android.R.drawable.ic_menu_mapmode));
         adapter.addItem(new MeetListviewItem("we일","9","오후 05:00","2017 / 7 / 9 오후 5시 0분","부천역 더치앤빈","각자커피값","￦","부천IT 스터디 안드로이드 개발",android.R.drawable.ic_lock_idle_alarm,android.R.drawable.ic_menu_mapmode));
         adapter.addItem(new MeetListviewItem("wer요일","9","오후 05:00","2017 / 7 / 9 오후 5시 0분","부천역 더치앤빈","각자커피값","￦","부천IT 스터디 안드로이드 개발",android.R.drawable.ic_lock_idle_alarm,android.R.drawable.ic_menu_mapmode));
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView parent, View v, int position, long id) {
+
+                // get TextView's Text.
+                MeetListviewItem item = (MeetListviewItem) parent.getItemAtPosition(position) ;
+//                Log.d("test", item.place );
+
+                Intent intent = new Intent( getActivity(), MeetView.class);
+
+                intent.putExtra("item", item.resId);
+
+
+                startActivity(intent);
+
+
+
+
+
+
+
+
+
+
+                // TODO : use strText
+            }
+        }) ;
+
+
 //
         listView.setAdapter(adapter);
+
+
+        FloatingActionButton btnCreateMeeting = (FloatingActionButton) view.findViewById( R.id.btn_create_meeting );
+        btnCreateMeeting.setOnClickListener( new Button.OnClickListener() {
+            @Override public void onClick(View view) {
+                Intent intent = new Intent( getActivity(), CreateMeet.class);
+                startActivity(intent);
+//                finish();
+            }
+        } );
 
         return view;
 

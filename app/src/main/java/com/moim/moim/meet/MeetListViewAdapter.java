@@ -15,7 +15,7 @@ import java.util.Objects;
  * Created by ltcare on 2017-07-01.
  */
 
-public class ListViewAdapter extends BaseAdapter {
+public class MeetListViewAdapter extends BaseAdapter {
     // Adapter에 추가된 데이터를 저장하기 위한 ArrayList
     private ArrayList<MeetListviewItem> items = new ArrayList<MeetListviewItem>() ;
 

@@ -30,7 +30,8 @@ public class KakaoHelper {
         AuthService.requestAccessTokenInfo(new ApiResponseCallback<AccessTokenInfoResponse>() {
             @Override
             public void onSessionClosed(ErrorResult errorResult) {
-                Log.d("test", "13");
+                Log.d("test", errorResult + "" );
+                //로그인 안했을때
 //                redirectLoginActivity(self);
             }
 

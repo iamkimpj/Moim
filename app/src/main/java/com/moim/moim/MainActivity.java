@@ -57,14 +57,14 @@ public class MainActivity extends AppCompatActivity {
 //        if( true ){
 //            final Intent intent = new Intent(this, LoginActivity.class);
 //            startActivity(intent);
-//            finish();
+////            finish();
 //        }
 
 
-//        if( true ){
-//            KakaoHelper.ready().requestAccessTokenInfo();
-//
-//        }
+        if( true ){
+            KakaoHelper.ready().requestAccessTokenInfo();
+
+        }
 
 
 //        Call<TestSchema> call = Conn.ready().api().connTest();

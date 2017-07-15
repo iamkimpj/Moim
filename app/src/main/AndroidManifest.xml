@@ -35,20 +35,24 @@
 
         <activity
             android:name=".KakaoSDK.KakaoLoginActivity"
-            android:label="Kakao Login" ></activity>
+            android:label="Kakao Login" />
         <activity
             android:name=".Login.LoginActivity"
-            android:label="Login group"></activity>
+            android:label="Login group" />
         <activity
             android:name="com.kakao.auth.authorization.authcode.KakaoWebViewActivity"
             android:launchMode="singleTop"
             android:windowSoftInputMode="adjustResize">
-
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name=".meet.CreateMeet" />
+        <activity
+            android:name=".meet.IN.MeetView"
+            android:label="@string/title_activity_meet_view"></activity>
     </application>
 
 </manifest>
