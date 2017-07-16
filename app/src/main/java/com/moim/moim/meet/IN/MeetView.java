@@ -1,4 +1,4 @@
-package com.moim.moim.Meet.IN;
+package com.moim.moim.meet.IN;
 
 import android.content.Intent;
 import android.os.Bundle;

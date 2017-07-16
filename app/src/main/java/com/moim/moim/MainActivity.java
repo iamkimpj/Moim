@@ -6,8 +6,8 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
-import com.moim.moim.Group.GroupFragment;
-import com.moim.moim.Meet.MeetFragment;
+import com.moim.moim.group.GroupFragment;
+import com.moim.moim.meet.MeetFragment;
 
 
 public class MainActivity extends AppCompatActivity {

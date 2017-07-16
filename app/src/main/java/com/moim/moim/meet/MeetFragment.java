@@ -1,4 +1,4 @@
-package com.moim.moim.Meet;
+package com.moim.moim.meet;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,7 +17,7 @@ import android.widget.ListView;
 import com.moim.moim.R;
 
 
-import com.moim.moim.Meet.IN.MeetView;
+import com.moim.moim.meet.IN.MeetView;
 
 
 public class MeetFragment extends Fragment {
