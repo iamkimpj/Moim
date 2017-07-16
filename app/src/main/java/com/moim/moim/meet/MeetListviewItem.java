@@ -1,4 +1,4 @@
-package com.moim.moim.meet;
+package com.moim.moim.Meet;
 
 /**
  * Created by ltcare on 2017-07-04.

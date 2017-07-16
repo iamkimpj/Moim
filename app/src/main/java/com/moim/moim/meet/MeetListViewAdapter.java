@@ -1,14 +1,10 @@
-package com.moim.moim.meet;
+package com.moim.moim.Meet;
 
 
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import java.util.ArrayList;
-import android.content.Context;
-
-import java.util.Objects;
 
 
 /**

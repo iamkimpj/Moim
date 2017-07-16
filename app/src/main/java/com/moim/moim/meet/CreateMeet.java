@@ -1,4 +1,4 @@
-package com.moim.moim.meet;
+package com.moim.moim.Meet;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

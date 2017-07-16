@@ -1,4 +1,4 @@
-package com.moim.moim.meet;
+package com.moim.moim.Meet;
 
 import android.content.Context;
 import android.util.AttributeSet;
