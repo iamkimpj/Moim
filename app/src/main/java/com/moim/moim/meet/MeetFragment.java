@@ -113,7 +113,7 @@ public class MeetFragment extends Fragment {
 
                 Intent intent = new Intent( getActivity(), MeetView.class);
 
-                intent.putExtra("item", item.resId);
+                intent.putExtra("item", item.resId + "");
 
 
                 startActivity(intent);

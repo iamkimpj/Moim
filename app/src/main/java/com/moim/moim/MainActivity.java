@@ -61,10 +61,11 @@ public class MainActivity extends AppCompatActivity {
 //        }
 
 
-        if( true ){
-            KakaoHelper.ready().requestAccessTokenInfo();
-
-        }
+//        if( true ){
+////            KakaoHelper.ready().requestAccessTokenInfo();
+//            KakaoHelper.ready().requestMe();
+//
+//        }
 
 
 //        Call<TestSchema> call = Conn.ready().api().connTest();

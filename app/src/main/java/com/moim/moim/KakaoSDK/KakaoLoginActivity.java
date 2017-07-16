@@ -3,6 +3,7 @@ package com.moim.moim.KakaoSDK;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.kakao.auth.ISessionCallback;
 import com.kakao.auth.Session;
@@ -39,8 +40,11 @@ public class KakaoLoginActivity extends Activity {
         if (Session.getCurrentSession().handleActivityResult(requestCode, resultCode, data)) {
             return;
         }
-
+        Log.d("test", "12312");
+        Log.d("test", data + "");
         super.onActivityResult(requestCode, resultCode, data);
+
+
     }
 
     @Override

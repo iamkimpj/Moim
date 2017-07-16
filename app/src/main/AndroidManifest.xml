@@ -31,7 +31,7 @@
             android:value="6b6a873980caf693c85a8e205a236547" />
         <meta-data
             android:name="com.kakao.sdk.ClientSecret"
-            android:value="6lxqTGCZhY4fpc5s71a6CfI9cNIudakY" />
+            android:value="ie6U87VHbAxQDd6cbsWbMzmdb2p6y45J" />
 
         <activity
             android:name=".KakaoSDK.KakaoLoginActivity"
