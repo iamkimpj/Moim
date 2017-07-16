@@ -6,4 +6,16 @@
     android:layout_height="match_parent"
     tools:context="com.moim.moim.meet.CreateMeet">
 
+    <LinearLayout
+        android:layout_width="386dp"
+        android:layout_height="212dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="2dp">
+
+        <LinearLayout
+            android:layout_width="141dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"></LinearLayout>
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
