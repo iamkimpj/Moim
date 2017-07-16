@@ -49,9 +49,9 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Meet.CreateMeet" />
+        <activity android:name=".meet.CreateMeet" />
         <activity
-            android:name=".Meet.IN.MeetView"
+            android:name=".meet.IN.MeetView"
             android:label="@string/title_activity_meet_view"></activity>
     </application>
 
