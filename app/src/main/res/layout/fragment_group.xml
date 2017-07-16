@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/fragment_group"
-    tools:context="com.moim.moim.group.GroupFragment">
+    tools:context="com.moim.moim.Group.GroupFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <!--<TextView-->

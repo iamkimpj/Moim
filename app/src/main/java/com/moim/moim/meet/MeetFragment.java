@@ -1,38 +1,25 @@
-package com.moim.moim.meet;
+package com.moim.moim.Meet;
 
-import android.content.Context;
-import android.net.Uri;
+import android.content.Intent;
 import android.os.Bundle;
 //import android.app.Fragment;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-
-//import android.os.Bundle;
-//import android.support.annotation.Nullable;
-//import android.support.v4.app.Fragment;
-//import android.view.LayoutInflater;
-//import android.view.View;
-//import android.view.ViewGroup;
-
-import com.moim.moim.R;
-
-
+import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.ListView;
 
 
 import com.moim.moim.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link MeetFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link MeetFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
+import com.moim.moim.Meet.IN.MeetView;
+
+
 public class MeetFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -76,13 +63,79 @@ public class MeetFragment extends Fragment {
 //        }
 //    }
 
-//    @Override
-//    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-//        // Inflate the layout for this fragment
-//        return inflater.inflate(R.layout.fragment_meet, container, false);
-//    }
+
+
+    ListView listView;
+    MeetListViewAdapter adapter;
+
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_meet,container,false);
+       // return inflater.inflate(R.layout.fragment_meet,container,false);
+
+
+        View view = inflater.inflate(R.layout.fragment_meet, container,false);
+//        listView = (ListView) getActivity().findViewById(R.id.meetlistview);
+
+        listView = (ListView) view.findViewById(R.id.meetlistview);
+
+
+
+       // setContentView(R.layout.fragment_meet);
+
+        //listView = (ListView) findViewById(R.id.listview);
+
+        adapter = new MeetListViewAdapter();
+
+//        adapter = new ListViewAdapter(getActivity(), movieList);
+//
+        adapter.addItem(new MeetListviewItem("수요일","9","오후 05:00","2017 / 7 / 9 오후 5시 0분","부천역 더치앤빈","각자커피값","￦","부천IT 스터디 안드로이드 개발",android.R.drawable.ic_lock_idle_alarm,android.R.drawable.ic_menu_mapmode));
+        adapter.addItem(new MeetListviewItem("2ww","9","오후 05:00","2017 / 7 / 9 오후 5시 0분","부천역 더치앤빈","각자커피값","￦","부천IT 스터디 안드로이드 개발",android.R.drawable.ic_lock_idle_alarm,android.R.drawable.ic_menu_mapmode));
+        adapter.addItem(new MeetListviewItem("we일","9","오후 05:00","2017 / 7 / 9 오후 5시 0분","부천역 더치앤빈","각자커피값","￦","부천IT 스터디 안드로이드 개발",android.R.drawable.ic_lock_idle_alarm,android.R.drawable.ic_menu_mapmode));
+        adapter.addItem(new MeetListviewItem("wer요일","9","오후 05:00","2017 / 7 / 9 오후 5시 0분","부천역 더치앤빈","각자커피값","￦","부천IT 스터디 안드로이드 개발",android.R.drawable.ic_lock_idle_alarm,android.R.drawable.ic_menu_mapmode));
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView parent, View v, int position, long id) {
+
+                // get TextView's Text.
+                MeetListviewItem item = (MeetListviewItem) parent.getItemAtPosition(position) ;
+//                Log.d("test", item.place );
+
+                Intent intent = new Intent( getActivity(), MeetView.class);
+
+                intent.putExtra("item", item.resId + "");
+
+
+                startActivity(intent);
+
+
+
+
+
+
+
+
+
+
+                // TODO : use strText
+            }
+        }) ;
+
+
+//
+        listView.setAdapter(adapter);
+
+
+        FloatingActionButton btnCreateMeeting = (FloatingActionButton) view.findViewById( R.id.btn_create_meeting );
+        btnCreateMeeting.setOnClickListener( new Button.OnClickListener() {
+            @Override public void onClick(View view) {
+                Intent intent = new Intent( getActivity(), CreateMeet.class);
+                startActivity(intent);
+//                finish();
+            }
+        } );
+
+        return view;
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event
