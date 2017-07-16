@@ -1,16 +1,13 @@
 package com.moim.moim;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
-import com.moim.moim.KakaoSDK.KakaoHelper;
-import com.moim.moim.Login.LoginActivity;
-import com.moim.moim.group.GroupFragment;
-import com.moim.moim.meet.MeetFragment;
+import com.moim.moim.Group.GroupFragment;
+import com.moim.moim.Meet.MeetFragment;
 
 
 public class MainActivity extends AppCompatActivity {
