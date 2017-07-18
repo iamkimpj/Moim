@@ -73,28 +73,7 @@ public class MainActivity extends AppCompatActivity {
 //        }
 
         testKoten();
-//        Call<AuthSchema> call = Conn.ready().api().authTest();
-//        call.enqueue(new Callback<AuthSchema>() {
-//            @Override
-//            public void onResponse(Call<AuthSchema> call, Response<AuthSchema> response) {
-//                if (response.isSuccessful()) {
-//
-//                    AuthSchema test = response.body();
-//
-//                    test.test();
-//
-//
-//                } else {
-//                    Log.d("test","failed to get respose");
-//                }
-//            }
-//
-//            @Override
-//            public void onFailure(Call<AuthSchema> call, Throwable t) {
-//                Log.d("test","failed to connect");
-//            }
-//
-//        });
+
 
 
 

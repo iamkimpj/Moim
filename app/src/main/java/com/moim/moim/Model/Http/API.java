@@ -18,7 +18,7 @@ public interface API {
 //    @POST("/auth/ato")
 //    Call<AuthSchema> auth();
 
-    @POST("/api/auth/tt")
+    @POST("/api/auth/ato")
     Call<AuthSchema> authTest();
 
     @POST("/api/user/me")
