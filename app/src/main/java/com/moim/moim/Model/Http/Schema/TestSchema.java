@@ -2,11 +2,16 @@ package com.moim.moim.Model.Http.Schema;
 
 import android.util.Log;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by developer on 2017. 7. 2..
  */
 
 public class TestSchema extends BaseSchema {
+//    @SerializedName("body")
+//    @Expose
     private _Body body;
 
     private class _Body {
