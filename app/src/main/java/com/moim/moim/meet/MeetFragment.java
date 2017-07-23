@@ -87,10 +87,16 @@ public class MeetFragment extends Fragment {
 
 //        adapter = new ListViewAdapter(getActivity(), movieList);
 //
-        adapter.addItem(new MeetListviewItem("수요일","9","오후 05:00","2017 / 7 / 9 오후 5시 0분","부천역 더치앤빈","각자커피값","￦","부천IT 스터디 안드로이드 개발",android.R.drawable.ic_lock_idle_alarm,android.R.drawable.ic_menu_mapmode));
-        adapter.addItem(new MeetListviewItem("2ww","9","오후 05:00","2017 / 7 / 9 오후 5시 0분","부천역 더치앤빈","각자커피값","￦","부천IT 스터디 안드로이드 개발",android.R.drawable.ic_lock_idle_alarm,android.R.drawable.ic_menu_mapmode));
-        adapter.addItem(new MeetListviewItem("we일","9","오후 05:00","2017 / 7 / 9 오후 5시 0분","부천역 더치앤빈","각자커피값","￦","부천IT 스터디 안드로이드 개발",android.R.drawable.ic_lock_idle_alarm,android.R.drawable.ic_menu_mapmode));
-        adapter.addItem(new MeetListviewItem("wer요일","9","오후 05:00","2017 / 7 / 9 오후 5시 0분","부천역 더치앤빈","각자커피값","￦","부천IT 스터디 안드로이드 개발",android.R.drawable.ic_lock_idle_alarm,android.R.drawable.ic_menu_mapmode));
+        adapter.addItem(new MeetListviewItem("화요일","25","오후 05:00","2017 / 7 / 25 오후 5시 0분","신중동 썬팁스","각자커피값","부천IT 스터디 안드로이드 개발","￦",android.R.drawable.ic_lock_idle_alarm,android.R.drawable.ic_menu_mapmode));
+        adapter.addItem(new MeetListviewItem("토요일","29","오후 05:00","2017 / 7 / 29 오후 2시 0분","신중동 썬팁스","각자커피값","부천IT 스터디 안드로이드 개발","￦",android.R.drawable.ic_lock_idle_alarm,android.R.drawable.ic_menu_mapmode));
+        adapter.addItem(new MeetListviewItem("일요일","30","오후 05:00","2017 / 7 / 30 오후 2시 0분","부천역 더치앤빈","각자커피값","부천IT 스터디 안드로이드 개발","￦",android.R.drawable.ic_lock_idle_alarm,android.R.drawable.ic_menu_mapmode));
+        adapter.addItem(new MeetListviewItem("화요일","1","오후 05:00","2017 / 8 / 1 오후 5시 0분","부천역 더치앤빈","각자커피값","부천IT 스터디 안드로이드 개발","￦",android.R.drawable.ic_lock_idle_alarm,android.R.drawable.ic_menu_mapmode));
+        adapter.addItem(new MeetListviewItem("토요일","5","오전 10:00","2017 / 8 / 5 오전 10시 0분","대천해수욕장 및 전주투어~","N빵","부천IT 스터디 안드로이드 개발","￦",android.R.drawable.ic_lock_idle_alarm,android.R.drawable.ic_menu_mapmode));
+        adapter.addItem(new MeetListviewItem("토요일","5","오전 10:00","2017 / 8 / 5 오전 10시 0분","대천해수욕장 및 전주투어~","N빵","부천IT 스터디 안드로이드 개발","￦",android.R.drawable.ic_lock_idle_alarm,android.R.drawable.ic_menu_mapmode));
+        adapter.addItem(new MeetListviewItem("토요일","5","오전 10:00","2017 / 8 / 5 오전 10시 0분","대천해수욕장 및 전주투어~","N빵","부천IT 스터디 안드로이드 개발","￦",android.R.drawable.ic_lock_idle_alarm,android.R.drawable.ic_menu_mapmode));
+        adapter.addItem(new MeetListviewItem("토요일","5","오전 10:00","2017 / 8 / 5 오전 10시 0분","대천해수욕장 및 전주투어~","N빵","부천IT 스터디 안드로이드 개발","￦",android.R.drawable.ic_lock_idle_alarm,android.R.drawable.ic_menu_mapmode));
+
+
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
