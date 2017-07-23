@@ -90,9 +90,6 @@ public class MainActivity extends AppCompatActivity {
 //                .add(R.id.content, new MeetFragment())
 //                .commit();
 
-
-
-
     }
 
     private void testKoten () {
