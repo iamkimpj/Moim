@@ -55,7 +55,7 @@ public class MeetView extends AppCompatActivity {
 
         drawUserList(  );
         final ScrollView sv = (ScrollView) findViewById(R.id.vscroll);
-        Log.d("test", "1212111112");
+        Log.d("test", "121211");
         sv.scrollTo(1,0);
 
         sv.post(new Runnable() {
