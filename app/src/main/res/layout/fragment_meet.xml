@@ -47,6 +47,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!--ImageButton
+            android:id="@+id/btn_create_meeting"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:background="@drawable/oval"
+            android:src="@mipmap/btn_mett_plus"
+            /-->
+
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/btn_create_meeting"
             android:layout_width="wrap_content"
@@ -54,10 +64,10 @@
             android:layout_gravity="bottom|end"
             android:layout_margin="@dimen/fab_margin"
             android:clickable="true"
-            app:backgroundTint="@android:color/background_light"
+            app:backgroundTint="@color/com_kakao_brown"
             app:elevation="8dp"
-            app:rippleColor="@color/colorPrimary"
-            app:srcCompat="@android:drawable/ic_menu_add" />
+            app:srcCompat="@drawable/account" />
+
     </FrameLayout>
 
 </FrameLayout>

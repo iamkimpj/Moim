@@ -14,7 +14,224 @@
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <TextView
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/darker_gray"
+                android:elevation="1dp"
+                android:paddingBottom="2dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="2dp"
+                android:text="번개 정보"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:background="@drawable/border_radius"
+                android:padding="5dp">
+
+                <ScrollView
+                    android:id="@+id/vscroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border_bottom"
+                            android:paddingBottom="2dp"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="2dp"
+                            android:text="벙개의 내용표시(총인원10명)"
+                            android:textSize="20dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="89dp"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/border_right"
+                                    android:gravity="center"
+                                    android:text="토요일"
+                                    android:textSize="16dp" />
+
+                                <TextView
+                                    android:id="@+id/textView1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/border_right"
+                                    android:gravity="center_horizontal"
+                                    android:text="21"
+                                    android:textSize="40dp" />
+
+                                <TextView
+                                    android:id="@+id/textView2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/border_right"
+                                    android:gravity="center"
+                                    android:text="오후 07:30"
+                                    android:textSize="14dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/imageView"
+                                        android:layout_width="30dp"
+                                        android:layout_height="20dp"
+                                        android:layout_weight="1"
+                                        app:srcCompat="@android:drawable/ic_lock_idle_alarm" />
+
+                                    <TextView
+                                        android:id="@+id/textView3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="20dp"
+                                        android:layout_weight="1"
+                                        android:paddingLeft="5dp"
+                                        android:text="2017 / 7 / 21  오후 9시 0분"
+                                        android:textSize="16dp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/imageView1"
+                                        android:layout_width="30dp"
+                                        android:layout_height="50dp"
+                                        android:layout_weight="1"
+                                        android:foregroundGravity="center_vertical"
+                                        app:srcCompat="@android:drawable/ic_menu_mapmode" />
+
+                                    <TextView
+                                        android:id="@+id/textView4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="50dp"
+                                        android:layout_weight="1"
+                                        android:gravity="center_vertical"
+                                        android:paddingLeft="5dp"
+                                        android:text="신중동 카페 썬팁스"
+                                        android:textSize="20dp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/textView7"
+                                        android:layout_width="30dp"
+                                        android:layout_height="20dp"
+                                        android:layout_gravity="left"
+                                        android:layout_weight="1"
+                                        android:text="￦"
+                                        android:textSize="16dp" />
+
+                                    <TextView
+                                        android:id="@+id/textView5"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="20dp"
+                                        android:layout_weight="1"
+                                        android:paddingLeft="5dp"
+                                        android:text="차값+1000원 지참"
+                                        android:textSize="16dp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/text_line"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/border_bottom" />
+
+                        <TextView
+                            android:id="@+id/textView10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/border_bottom"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+                            android:text="
+    여기서 오늘 모이실 분들은\n
+    아래 참여버튼을 눌러주신후\n
+    참여해 주시기 바랍니다\n\n
+    참고로 각자의 커피값은 현금으로 지참하시가\n
+    바랍니다 ^^ \n"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/textView11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border_bottom"
+                            android:paddingBottom="2dp"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="2dp"
+                            android:text="참여자"
+                            android:textSize="20dp" />
+
+                        <ListView
+                            android:id="@+id/userlistview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:choiceMode="singleChoice" />
+
+                    </LinearLayout>
+                </ScrollView>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <!--TextView
             android:id="@+id/message"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -22,7 +239,9 @@
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:text="@string/title_home" />
+            android:text="@string/title_home" /-->
+
+
 
     </FrameLayout>
 
