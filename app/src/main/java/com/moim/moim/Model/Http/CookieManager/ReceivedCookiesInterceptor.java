@@ -21,7 +21,7 @@ public class ReceivedCookiesInterceptor implements Interceptor {
     public Response intercept(Chain chain) throws IOException {
         Response originalResponse = chain.proceed(chain.request());
 
-        Log.d("test", "recive cookie In");
+//        Log.d("test", "recive cookie In");
 
 //        if( !originalResponse.header("X-AUTH-TOKEN").isEmpty() ){
         if( originalResponse.header("X-AUTH-TOKEN") != null ){
@@ -32,12 +32,12 @@ public class ReceivedCookiesInterceptor implements Interceptor {
             token_editor.commit();
 
 
-            Log.d("test 3434", originalResponse.header("X-AUTH-TOKEN"));
+//            Log.d("test 3434", originalResponse.header("X-AUTH-TOKEN"));
         }
 
-        Log.d("test 3434rr", (originalResponse.header("X-AUTH-TOKEN") == null) + "" );
+//        Log.d("test 3434rr", (originalResponse.header("X-AUTH-TOKEN") == null) + "" );
 
-        Log.d("test", "3434111");
+//        Log.d("test", "3434111");
 //        if (!originalResponse.headers("Set-Cookie").isEmpty()) {
 //            HashSet<String> cookies = new HashSet<>();
 //

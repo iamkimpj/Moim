@@ -23,7 +23,7 @@ public class AddCookiesInterceptor implements Interceptor {
 
     @Override
     public Response intercept(Chain chain) throws IOException {
-        Log.d("test", "add cookie In");
+//        Log.d("test", "add cookie In");
         Request.Builder builder = chain.request().newBuilder();
 
         // Preference에서 cookies를 가져오는 작업을 수행
@@ -35,7 +35,7 @@ public class AddCookiesInterceptor implements Interceptor {
         // Web,Android,iOS 구분을 위해 User-Agent세팅
         builder.removeHeader("User-Agent").addHeader("User-Agent", "Android");
 
-        Log.d("test add token", token_pref.getString("_token", "0"));
+//        Log.d("test add token", token_pref.getString("_token", "0"));
         return chain.proceed(builder.build());
     }
 }

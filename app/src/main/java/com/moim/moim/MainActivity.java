@@ -85,10 +85,10 @@ public class MainActivity extends AppCompatActivity {
 //        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 //
 //
-//        getSupportFragmentManager()
-//                .beginTransaction()
-//                .add(R.id.content, new MeetFragment())
-//                .commit();
+        getSupportFragmentManager()
+                .beginTransaction()
+                .add(R.id.content, new MeetFragment())
+                .commit();
 
     }
 

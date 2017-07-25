@@ -15,7 +15,8 @@ public class Conn {
 
 //    private static final String host = "http://52.79.231.212";
 //    private static final String host = "https://jumoim-171709.appspot.com";
-    private static final String host = "http://192.168.0.60:8080";
+    private static final String host = "http://172.30.1.22:8080";
+
     private static  OkHttpClient.Builder OKHTTP_CLIENT;
     static {
         OKHTTP_CLIENT = new OkHttpClient.Builder();
@@ -34,7 +35,7 @@ public class Conn {
 
     public API api( )
     {
-        String host = this.host;
+        String host = Conn.host;
 
         OkHttpClient okhttp_client = new OkHttpClient();
 // 쿠키를 Prefreence에 저장하고 가져옴
