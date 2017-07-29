@@ -99,10 +99,10 @@ public class CreateMeet extends AppCompatActivity {
 
 
 
-        Log.d("test", "222");
+//        Log.d("test", "222");
     }
 
-    private void createMeetToServer(){
+    private void createMeetToServer(  ){
 
         String title     = "test test";
         String date     = "2017-03-12";
@@ -116,10 +116,7 @@ public class CreateMeet extends AppCompatActivity {
 
             @Override
             protected String doInBackground(String... params) {
-//                GitHubService gitHubService = GitHubService.retrofit.create(GitHubService.class);
-//                Call<List<Contributor>> call = gitHubService.repoContributors("square", "retrofit");
 
-//                Log.d("test", params + "");
                 Call<MeetSchema> call = Conn.ready().api().createMeet(
                         params[0], params[1], params[2], params[3],
                         params[4], params[5], params[6]
@@ -131,7 +128,7 @@ public class CreateMeet extends AppCompatActivity {
                     Response<MeetSchema> response = call.execute();
 
                     if (response.isSuccessful()) {
-                        Log.d("test","sucesss to get respose");
+//                        Log.d("test","sucesss to get respose");
                         MeetSchema test = response.body();
 
                         test.test();

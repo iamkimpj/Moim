@@ -81,8 +81,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-//        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-//        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 //
 //
         getSupportFragmentManager()
@@ -94,7 +94,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void testKoten () {
         Call<AuthSchema> call = Conn.ready().api().authTest();
-//        Call<AuthSchema> call = Conn.ready().api().tokenTest11();
         call.enqueue(new Callback<AuthSchema>() {
             @Override
             public void onResponse(Call<AuthSchema> call, Response<AuthSchema> response) {
