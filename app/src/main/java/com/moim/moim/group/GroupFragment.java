@@ -11,21 +11,35 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ListView;
 
 import com.moim.moim.R;
 import com.moim.moim.group.Create.CreateGroup;
+import com.moim.moim.group.List.GroupListViewAdapter;
+import com.moim.moim.group.List.GroupListViewItem;
 import com.moim.moim.meet.CreateMeet;
 
 
 public class GroupFragment extends Fragment {
 
-
+    ListView listView;
+    GroupListViewAdapter adapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable  Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_group, container, false);
+
+        listView = (ListView) view.findViewById(R.id.grouplistview);
+
+        adapter = new GroupListViewAdapter();
+
+
+        adapter.addItem(new GroupListViewItem(1,119,"부천시 중동","부천IT 스터디 안드로이드 개발","2017 / 7 / 25 오후 5시 0분","신중동 썬팁스"));
+
+
+        listView.setAdapter(adapter);
 
         FloatingActionButton btnCreateMeeting = (FloatingActionButton) view.findViewById( R.id.btn_create_group );
         btnCreateMeeting.setOnClickListener( new Button.OnClickListener() {
