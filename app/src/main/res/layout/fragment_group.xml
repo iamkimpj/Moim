@@ -56,7 +56,7 @@
             /-->
 
         <android.support.design.widget.FloatingActionButton
-            android:id="@+id/btn_create_meeting"
+            android:id="@+id/btn_create_group"
             app:backgroundTint="@color/com_kakao_brown"
             app:elevation="8dp"
             app:srcCompat="@drawable/account"

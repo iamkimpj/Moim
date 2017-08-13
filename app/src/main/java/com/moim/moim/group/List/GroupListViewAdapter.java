@@ -5,6 +5,6 @@ import android.widget.BaseAdapter;
 /**
  * Created by developer on 2017. 8. 13..
  */
-//13
+
 //public class GroupListViewAdapter extends BaseAdapter {
 //}
