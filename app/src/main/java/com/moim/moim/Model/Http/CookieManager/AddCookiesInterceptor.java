@@ -34,7 +34,7 @@ public class AddCookiesInterceptor implements Interceptor {
 
         // Web,Android,iOS 구분을 위해 User-Agent세팅
         builder.removeHeader("User-Agent").addHeader("User-Agent", "Android");
-
+//        builder.addQueryParameter("device","3");
 //        Log.d("test add token", token_pref.getString("_token", "0"));
         return chain.proceed(builder.build());
     }

@@ -30,9 +30,9 @@ public class Device {
         return Device.Singleton.instance;
     }
 
-    private void setUUID() {
+    private void setUUID( Context context ) {
         if (uuid == null) {
-            Context context = (new Activity()).getApplicationContext();
+//            Context context = (new Activity).getApplicationContext();
             synchronized (Device.class) {
                 if (uuid == null) {
                     final SharedPreferences prefs = context
@@ -76,8 +76,8 @@ public class Device {
         }
     }
 
-    public UUID id() {
-        setUUID();
+    public UUID id( Context context ) {
+        setUUID( context );
         return uuid;
     }
 }

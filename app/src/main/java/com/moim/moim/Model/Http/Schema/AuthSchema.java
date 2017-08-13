@@ -20,10 +20,11 @@ import java.util.Set;
 public class AuthSchema extends BaseSchema {
     //    @SerializedName("body")
 //    @Expose
-    private HashMap< String, String > body;
+//    private HashMap< String, String > body;
 //    private HashMap body;
 //    private HashMap< ? ,? > body;
-//    private _Body bodyody;
+    private _Body body;
+
 
     private class _Body {
         public String key;
@@ -45,14 +46,15 @@ public class AuthSchema extends BaseSchema {
 //        }
 
         Log.d("test_response_obj", this.body.toString()   );
-        Log.d("test_response_obj", this.body.get("phone") + "" );
-        Log.d("test_response_obj", this.body.get("id") + ""   );
-        Log.d("test_response_obj", (this.body.get("created") == null) + ""   );
-        Log.d("test_response_obj", (this.body.get("birthDate") != null)? this.body.get("birthDate") + "" : "null"   );
-        Gson gson = new Gson();
-        HashMap point = new Gson().fromJson( this.body.get("point").toString(), HashMap.class );
-
-        Log.d("test_response_obj",  point.get("point") + "" );
+//        Log.d("test_response_obj", this.body.toString()   );
+//        Log.d("test_response_obj", this.body.get("phone") + "" );
+//        Log.d("test_response_obj", this.body.get("id") + ""   );
+//        Log.d("test_response_obj", (this.body.get("created") == null) + ""   );
+//        Log.d("test_response_obj", (this.body.get("birthDate") != null)? this.body.get("birthDate") + "" : "null"   );
+//        Gson gson = new Gson();
+//        HashMap point = new Gson().fromJson( this.body.get("point").toString(), HashMap.class );
+//
+//        Log.d("test_response_obj",  point.get("point") + "" );
 //        Log.d("test_response_obj",  ( this.body.get("point") instanceof JsonObject) + "" );
 //        Log.d("test", this.head.this.body.get("point") );
 

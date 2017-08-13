@@ -4,8 +4,11 @@ import com.moim.moim.Model.Http.Schema.AuthSchema;
 import com.moim.moim.Model.Http.Schema.MeetSchema;
 import com.moim.moim.Model.Http.Schema.TestSchema;
 
+import java.util.UUID;
+
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Headers;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
 
@@ -20,8 +23,12 @@ public interface API {
 //    @POST("/auth/ato")
 //    Call<AuthSchema> auth();
 
-    @POST("/api/auth/tt")
-    Call<AuthSchema> authTest();
+    @Headers("Content-Type: application/json")
+    @POST("/api/v1/auth/tt")
+    Call<AuthSchema> authTest(
+            @Query("device_type") String device_type,
+            @Query("device_id") UUID device_id
+    );
 
     @POST("/api/user/me")
     Call<AuthSchema> tokenTest11();
@@ -35,7 +42,6 @@ public interface API {
             @Query("people") String people,
             @Query("amount") String amount,
             @Query("text") String text
-
     );
 
 //    String date     = dateView.getText().toString();

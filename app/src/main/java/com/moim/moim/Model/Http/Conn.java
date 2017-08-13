@@ -15,7 +15,7 @@ public class Conn {
 
 //    private static final String host = "http://52.79.231.212";
 //    private static final String host = "https://jumoim-171709.appspot.com";
-    private static final String host = "http://172.30.1.22:8080";
+    private static final String host = "http://192.168.219.121:8080";
 
     private static  OkHttpClient.Builder OKHTTP_CLIENT;
     static {
