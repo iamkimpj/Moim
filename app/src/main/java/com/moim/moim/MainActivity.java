@@ -81,16 +81,16 @@ public class MainActivity extends AppCompatActivity {
 
 
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main);
 //
 //
-//        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-//        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-//        getSupportFragmentManager()
-//                .beginTransaction()
-//                .add(R.id.content, new GroupFragment())
-//                .commit();
+        getSupportFragmentManager()
+                .beginTransaction()
+                .add(R.id.content, new GroupFragment())
+                .commit();
 
     }
 
@@ -115,6 +115,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<AuthSchema> call, Throwable t) {
+                Log.d("test", call + "");
                 Log.d("test","failed to connect");
             }
 

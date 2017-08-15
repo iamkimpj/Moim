@@ -31,7 +31,7 @@ public class GroupListViewItemView extends LinearLayout{
                 context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         inflater.inflate(R.layout.group_listview, this, true);
 
-        textView = (TextView) findViewById(R.id.gtextView);
+        textView = (TextView) findViewById(R.id.textView);
         textView1 = (TextView) findViewById(R.id.textView1);
         textView2 = (TextView) findViewById(R.id.textView2);
         textView3 = (TextView) findViewById(R.id.textView3);

@@ -58,6 +58,9 @@
 
 
         <activity android:name=".group.Create.CreateGroup" />
+        <activity
+            android:name=".group.Detail.GroupView"
+            android:label="@string/title_activity_meet_view"></activity>
     </application>
 
 </manifest>
