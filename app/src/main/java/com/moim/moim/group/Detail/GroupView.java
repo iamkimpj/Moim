@@ -15,6 +15,8 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.moim.moim.R;
+import com.moim.moim.group.Auth.JoinActivity;
+import com.moim.moim.group.List.GroupListViewItem;
 import com.moim.moim.meet.IN.MeetViewUserListviewAdapter;
 import com.moim.moim.meet.IN.MeetViewUserListviewItem;
 
@@ -24,56 +26,51 @@ import com.moim.moim.meet.IN.MeetViewUserListviewItem;
 
 public class GroupView extends AppCompatActivity {
     int gId;
-    private TextView mTextMessage;
+//    private TextView mTextMessage;
 
-//    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-//            = new BottomNavigationView.OnNavigationItemSelectedListener() {
-//
-//        @Override
-//        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-//            switch (item.getItemId()) {
-//                case R.id.navigation_join:
-//                    mTextMessage.setText("참여하기");
-//                    return true;
-//            }
-//            return false;
-//        }
-//
-//    };
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            switch (item.getItemId()) {
+                case R.id.g_joinus:
+                    Intent intent = new Intent( GroupView.this, JoinActivity.class);
+//                    intent.putExtra("gId", this.gId + "");
+
+
+                    startActivity(intent);
+
+                    return true;
+            }
+            return false;
+        }
+
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_meet_view);
-        Log.d("test", "3333333");
+        setContentView(R.layout.group_detail);
+//        Log.d("test", "3333333");
         Intent intent = getIntent();
 
         String meet_id = intent.getStringExtra("gId");
 
-        //mTextMessage = (TextView) findViewById(R.id.message);
-        //mTextMessage.setText( meet_id );
 
-//        drawUserList(  );
-//        final ScrollView sv = (ScrollView) findViewById(R.id.vscroll);
-//        Log.d("test", "121211");
-//        sv.scrollTo(1,0);
-
-//        sv.post(new Runnable() {
-//            @Override
-//            public void run() {
-//                sv.scrollTo(0,0);
-//            }
-//        });
-
-
-//
+        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.group_detail_navigation);
+        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
 
 
 
-//        BottomNavigationView meet_navigation = (BottomNavigationView) findViewById(R.id.meet_navigation);
-//        meet_navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
     }
+
+////    @Override
+//    protected void onCreateView(Bundle savedInstanceState) {
+//
+//    }
 
 
 

@@ -61,6 +61,7 @@
         <activity
             android:name=".group.Detail.GroupView"
             android:label="@string/title_activity_meet_view"></activity>
+        <activity android:name=".group.Auth.JoinActivity" />
     </application>
 
 </manifest>
