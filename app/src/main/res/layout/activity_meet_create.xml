@@ -153,7 +153,7 @@
         android:layout_width="186dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:onClick="create_btnclick"
+        android:onClick="create_meet_btnclick"
         android:text="올리기" />
 
 </LinearLayout>

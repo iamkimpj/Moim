@@ -1,103 +1,70 @@
 package com.moim.moim.group.Create;
 
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
+import android.widget.RadioGroup;
 
-import com.moim.moim.Model.Http.Conn;
-import com.moim.moim.Model.Http.Schema.AuthSchema;
-import com.moim.moim.Model.Http.Schema.MeetSchema;
 import com.moim.moim.R;
 
-import java.io.IOException;
 
-import retrofit2.Call;
-import retrofit2.Response;
+public class CreateGroup extends AppCompatActivity   {
+    RadioGroup rg;
 
-public class CreateGroup extends AppCompatActivity {
+//    private RadioGroup.OnCheckedChangeListener mOnRadioListener = new RadioGroup.OnCheckedChangeListener() {
+//
+//        public void onCheckedChanged(RadioGroup view, int id)
+//        {
+//            Log.d("chk", "id" + id);
+//
+//            if (id == R.id.gPublic_check) {
+//                Log.d("chk", "id1111" + id);
+//            } else if (id == R.id.gSecret_check) {
+//                //some code
+//                Log.d("chk", "id22222" + id);
+//            }
+//
+//
+//        }
+//    };
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.d("test","set create view");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_group_create);
-    }
-//    public void create_btnclick(View v)
-//    {
-//        EditText dateView = (EditText) findViewById(R.id.date_input);
-//        EditText timeView = (EditText) findViewById(R.id.time_input);
-//        EditText placeView = (EditText) findViewById(R.id.place_input);
-//        EditText peopleView = (EditText) findViewById(R.id.people_input);
-//        EditText amountView = (EditText) findViewById(R.id.amount_input);
-//        EditText textView = (EditText) findViewById(R.id.text_input);
-//
-//
-//
-//
-//
-//
-//
-//    }
 
-//    private void createMeetToServer(  ){
-//
-//        String title     = "test test";
-//        String date     = "2017-03-12";
-//        String time     = "11:00";
-//        String place    = "인청";
-//        String people   = "34";
-//        String amount   = "30000";
-//        String text     = "그렇습니다";
-//
-//        (new AsyncTask<String, Void, String>() {
-//
-//            @Override
-//            protected String doInBackground(String... params) {
-//
-//                Call<MeetSchema> call = Conn.ready().api().createMeet(
-//                        params[0], params[1], params[2], params[3],
-//                        params[4], params[5], params[6]
-//                );
-//
-//
-//                try {
-//
-//                    Response<MeetSchema> response = call.execute();
-//
-//                    if (response.isSuccessful()) {
-////                        Log.d("test","sucesss to get respose");
-//                        MeetSchema test = response.body();
-//
-//                        test.test();
-//                    } else {
-//                        Log.d("test","failed to get respose");
-//                    }
-//
-//
-//                    Log.d( "test", response+"" );
-//                    Log.d( "test", response.body()+"" );
-//                    return "erer";
-////                    return call.execute().body().toString();
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-//
-//                return null;
-//            }
-//
-//            @Override
-//            protected void onPostExecute(String s) {
-//                super.onPostExecute(s);
-//                Log.d("test", "tototo");
-//                Log.d("test", s);
-////                TextView textView = (TextView) findViewById(R.id.textView);
-////                textView.setText(s);
-//            }
-//        }).execute( title, date, time, place, people, amount, text );
-//
-//    }
+
+
+//        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+//        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+
+        rg = (RadioGroup) findViewById(R.id.group);
+        rg.check(R.id.gPublic_check);
+
+//        rg.OnCheckedChangeListener();
+    }
+    public void gCreat_btnclick(View v)
+   {
+
+
+       EditText dateView = (EditText) findViewById(R.id.gLocal_input);
+       EditText timeView = (EditText) findViewById(R.id.gTitle_input);
+       EditText placeView = (EditText) findViewById(R.id.gIntro_input);
+
+       int id = rg.getCheckedRadioButtonId();
+
+       Log.d("test", id +"");
+
+
+
+//       radio = (RadioGroup) findViewById(R.id.group);
+
+
+   }
+
 }

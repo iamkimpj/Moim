@@ -6,10 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.moim.moim.Model.Http.Conn;
-import com.moim.moim.Model.Http.Schema.AuthSchema;
 import com.moim.moim.Model.Http.Schema.MeetSchema;
 import com.moim.moim.R;
 
@@ -27,7 +25,7 @@ public class CreateMeet extends AppCompatActivity {
         createMeetToServer();
 //        Log.d("test", "111111");
     }
-    public void create_btnclick(View v)
+    public void createmeet_btnclick(View v)
     {
         EditText dateView = (EditText) findViewById(R.id.date_input);
         EditText timeView = (EditText) findViewById(R.id.time_input);

@@ -15,15 +15,15 @@
 
         <TextView
             android:id="@+id/id_label1"
-            android:layout_width="90dp"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="날짜"
+            android:text="지역"
             android:textAlignment="center"
             android:textSize="30dp" />
 
         <EditText
-            android:id="@+id/date_input"
+            android:id="@+id/gLocal_input"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -39,15 +39,15 @@
 
         <TextView
             android:id="@+id/pass_label"
-            android:layout_width="90dp"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:text="시간"
+            android:text="모임이름"
             android:textAlignment="center"
             android:textIsSelectable="true"
             android:textSize="30dp" />
 
         <EditText
-            android:id="@+id/time_input"
+            android:id="@+id/gTitle_input"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -60,91 +60,66 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/id_label12"
-            android:layout_width="90dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="장소"
-            android:textAlignment="center"
-            android:textSize="30dp" />
-
-        <EditText
-            android:id="@+id/place_input"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/id_label33"
-            android:layout_width="90dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="인원"
-            android:textAlignment="center"
-            android:textSize="30dp" />
-
-        <EditText
-            android:id="@+id/people_input"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/id_label44"
-            android:layout_width="90dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="금액"
-            android:textAlignment="center"
-            android:textSize="30dp" />
-
-        <EditText
-            android:id="@+id/amount_input"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="0.98"
+        android:layout_weight="0.94"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/id_label"
-            android:layout_width="90dp"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="내용"
+            android:text="모임소개"
             android:textAlignment="center"
             android:textSize="30dp" />
 
         <EditText
-            android:id="@+id/text_input"
+            android:id="@+id/gIntro_input"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textMultiLine" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/gPeople_label"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="공개여부"
+            android:textAlignment="center"
+            android:textIsSelectable="true"
+            android:textSize="30dp" />
+
+        <RadioGroup
+            android:id="@+id/group"
+            android:layout_width="264dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+
+                <RadioButton
+                    android:id="@+id/gPublic_check"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="공개" />
+
+                <RadioButton
+                    android:id="@+id/gSecret_check"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="비공개" />
+
+
+
+        </RadioGroup>
 
     </LinearLayout>
 
@@ -153,7 +128,7 @@
         android:layout_width="186dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:onClick="create_btnclick"
-        android:text="올리기" />
+        android:onClick="gCreate_btnclick"
+        android:text="모임 개설" />
 
 </LinearLayout>
